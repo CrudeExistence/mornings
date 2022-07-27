@@ -2,10 +2,206 @@
 
 
 
+smallestDif1 = [10, 20, 14, 16, 18]
+smallestDif2 = [30, 23, 54, 33, 96]
+
+const smallestDif = (x, y) => {
+  difference = 123456789
+  for (i=0; i<x.length; i++) {
+    for (j=0; j<y.length; j++) {
+      if(x[i] > y[j]) {
+        let test = x[i] - y[j]
+        if(test<difference) {
+          difference = test
+        } else {
+          continue
+        }
+      } else if (x[i] < y[j]) {
+        let test = y[j] - x[i]
+        if(test<difference) {
+          difference = test
+        } else {
+          continue
+        }
+      }
+    }
+  }
+  return difference
+}
+
+console.log(smallestDif(smallestDif1,smallestDif2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// driving examples to create a function showing how long it would take to drive the distance
+
+// let distances = {
+//   name: `Jake's Great Shakes`,
+//   speedLimits: [
+//       {
+//           distance: 100,
+//           speedLimit: 75
+//       },
+//       {
+//           distance: 84,
+//           speedLimit: 70
+//       },
+//       {
+//           distance: 20,
+//           speedLimit: 75
+//       }
+//   ],
+//   traffic: 30
+// }
+
+
+// const howLong = (obj) => {
+  //assign speedLimits array to variable
+  // let arr = obj.speedLimits
+  // let result = [];
+  // let avg = 0;
+  // arr.forEach(e =>
+  //   {
+ //push result into array
+      // result.push(e.distance / e.speedLimit);
+ //add up speed limits
+      // avg += e.speedLimit;
+    // })
+  //find out avg and push to array
+//   result.push(avg / arr.length) 
+//   return result
+// }
+
+// console.table(howLong(distances));
+
+
+
+
+
+
+
+
+
+
+
+// function that takes a string and returns 24-hour time into words
+
+// const timeConvert = (numString) => {
+//   let hour, min = numString.split(':')
+//   hour = int(hour)
+//   min = int(min)
+//   let convertedHour = ``
+//   let convertedMin = ``
+//   let amPM = ``
+
+//   const smaller = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+//   const tens = ['twenty', 'thirty', 'forty', 'fifty']
+
+//   if (hour === 00) {
+//     convertedHour = 'Twelve'
+//     amPM = 'AM'
+//   } else if (hour === 01) {
+//     convertedHour = 'One'
+//     amPM = 'AM'
+//   } else if (hour === 02) {
+//     convertedHour = 'Two'
+//     amPM = 'AM'
+//   } else if (hour === 03) {
+//     convertedHour = 'Three'
+//     amPM = 'AM'
+//   } else if (hour === 04) {
+//     convertedHour = 'Four'
+//     amPM = 'AM'
+//   } else if (hour === 05) {
+//     convertedHour = 'Five'
+//     amPM = 'AM'
+//   } else if (hour === 06) {
+//     convertedHour = 'Six'
+//     amPM = 'AM'
+//   } else if (hour === 07) {
+//     convertedHour = 'Seven'
+//     amPM = 'AM'
+//   } else if (hour === 08) {
+//     convertedHour = 'Eight'
+//     amPM = 'AM'
+//   } else if (hour === 09) {
+//     convertedHour = 'Nine'
+//     amPM = 'AM'
+//   } else if (hour === 10) {
+//     convertedHour = 'Ten'
+//     amPM = 'AM'
+//   } else if (hour === 11) {
+//     convertedHour = 'Eleven'
+//     amPM = 'AM'
+//   } else if (hour === 12) {
+//     convertedHour = 'Twelve'
+//     amPM = 'PM'
+//   } else if (hour === 13) {
+//     convertedHour = 'One'
+//     amPM = 'PM'
+//   } else if (hour === 14) {
+//     convertedHour = 'Two'
+//     amPM = 'PM'
+//   } else if (hour === 15) {
+//     convertedHour = 'Three'
+//     amPM = 'PM'
+//   } else if (hour === 16) {
+//     convertedHour = 'Four'
+//     amPM = 'PM'
+//   } else if (hour === 17) {
+//     convertedHour = 'Five'
+//     amPM = 'PM'
+//   } else if (hour === 18) {
+//     convertedHour = 'Six'
+//     amPM = 'PM'
+//   } else if (hour === 19) {
+//     convertedHour = 'Seven'
+//     amPM = 'PM'
+//   } else if (hour === 20) {
+//     convertedHour = 'Eight'
+//     amPM = 'PM'
+//   } else if (hour === 21) {
+//     convertedHour = 'Nine'
+//     amPM = 'PM'
+//   } else if (hour === 22) {
+//     convertedHour = 'Ten'
+//     amPM = 'PM'
+//   } else if (hour === 23) {
+//     convertedHour = 'Eleven'
+//     amPM = 'PM'
+//   } else if (hour === 24) {
+//     convertedHour = 'Twelve'
+//     amPM = 'PM'
+//   } else {
+//     convertedHour = 'Googleclock'
+//   }
+
+//   if (min[0] === '0')
+// }
+
+
+// let time = "12:01"
+// let tim = time[0]+time[1]
+// let tim = time[0+1]
+// console.log(tim)
 
 
   
-  
+
+
+// writing to roman numerals
 
 const toRoman = (x) => {
     let romanString = '';
